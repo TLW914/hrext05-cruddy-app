@@ -7,7 +7,7 @@
 - [ ] edit individual items
 
 ##### Notes
-- [ ] Keep DOM and localStorage matching 
+- [ ] Keep DOM and localStorage matching
 - [ ] Remember event Delegation when adding new items to .show-text
 - [ ] make sure we do not duplicate data
 - [ ] add different values to the item
@@ -29,7 +29,28 @@
 #### Potential Libraries
 - [ ] lodash/underscore
 - [ ] jquery ui
-- [ ] bootstrap/material (css library)
+- [x] bootstrap/material (css library)
 
 #### My Spin
-(to be filled out by you)
+- [x] CRUD functionality for generating a fantasy sports lineup
+- [x] Use c3 js library for player data visualization
+- [x] bootstrap for styling
+- [x] potentially use underscore
+
+#### Rough Plan
+- [] Day 1 - Sketch out MVP - determine browser capacity for data, find how to convert csv's into JSON for c3 library
+- [] Day 2 - Get basic requirements outlined
+- [] Day 2 - Get a rough implementation of basic requirements
+- [] Day 2 - Clean up basic implementation
+- [] Day 3 - Complete strategy for your Feature 1
+- [] Day 3 - Implement solution for Feature 1
+- [] Day 4 - Complete strategy for your Feature 2
+- [] Day 4 - Implement solution for Feature 2
+- [] Day 5 - Prep to present
+
+
+
+
+
+
+
