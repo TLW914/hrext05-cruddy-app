@@ -16,6 +16,7 @@ $(document).ready(function(){
     var curKeyValue = "theKey"; // change to dynamic key?
     localStorage.setItem(curKeyValue, curTextValue);
     $(".show-text").append(curTextValue);
+    $("clear-cache-btn").toggleClass("btn btn-danger");
   });
 
   // remove item from app
