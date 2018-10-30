@@ -172,23 +172,24 @@ $(document).ready(function(){
    });
 
   $(".clear-entries-btn").on("click", function(){
-    localStorage.removeItem('player1');
+    localStorage.clear();
+    // localStorage.removeItem('player1');
     $(".player").empty();
     $(".player-fppg").empty();
     $(".player-salary").empty();
-    localStorage.removeItem('player2');
+    // localStorage.removeItem('player2');
     $(".player2").empty();
     $(".player-fppg2").empty();
     $(".player-salary2").empty();
-    localStorage.removeItem('player3');
+    // localStorage.removeItem('player3');
     $(".player3").empty();
     $(".player-fppg3").empty();
     $(".player-salary3").empty();
-    localStorage.removeItem('player4');
+    // localStorage.removeItem('player4');
     $(".player4").empty();
     $(".player-fppg4").empty();
     $(".player-salary4").empty();
-    localStorage.removeItem('player5');
+    // localStorage.removeItem('player5');
     $(".player5").empty();
     $(".player-fppg5").empty();
     $(".player-salary5").empty();
@@ -226,7 +227,66 @@ $(document).ready(function(){
     $(".player-fppg").empty();
     $(".player-salary").empty();
     i=0;
-
+  });
+  $('#row2').on("click", function(){
+    var playerObj = JSON.parse(localStorage.getItem('player2'));
+    var name = playerObj.name;
+    var points = playerObj.fppg;
+    var price = playerObj.salary;
+    //alert(name);
+    $('#theKey').val(name);
+    $('#theKey2').val(points);
+    $('#theKey3').val(price);
+    localStorage.removeItem('player2');
+    $(".player2").empty();
+    $(".player-fppg2").empty();
+    $(".player-salary2").empty();
+    i=1;
+  });
+  $('#row3').on("click", function(){
+    var playerObj = JSON.parse(localStorage.getItem('player3'));
+    var name = playerObj.name;
+    var points = playerObj.fppg;
+    var price = playerObj.salary;
+    //alert(name);
+    $('#theKey').val(name);
+    $('#theKey2').val(points);
+    $('#theKey3').val(price);
+    localStorage.removeItem('player3');
+    $(".player3").empty();
+    $(".player-fppg3").empty();
+    $(".player-salary3").empty();
+    i=2;
+  });
+  $('#row4').on("click", function(){
+    var playerObj = JSON.parse(localStorage.getItem('player4'));
+    var name = playerObj.name;
+    var points = playerObj.fppg;
+    var price = playerObj.salary;
+    //alert(name);
+    $('#theKey').val(name);
+    $('#theKey2').val(points);
+    $('#theKey3').val(price);
+    localStorage.removeItem('player4');
+    $(".player4").empty();
+    $(".player-fppg4").empty();
+    $(".player-salary4").empty();
+    i=3;
+  });
+  $('#row5').on("click", function(){
+    var playerObj = JSON.parse(localStorage.getItem('player5'));
+    var name = playerObj.name;
+    var points = playerObj.fppg;
+    var price = playerObj.salary;
+    //alert(name);
+    $('#theKey').val(name);
+    $('#theKey2').val(points);
+    $('#theKey3').val(price);
+    localStorage.removeItem('player5');
+    $(".player5").empty();
+    $(".player-fppg5").empty();
+    $(".player-salary5").empty();
+    i=4;
   });
 });
 
