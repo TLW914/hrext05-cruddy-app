@@ -3,24 +3,19 @@ listen for click event (edit)
 update text in local storage (with key)
 update display with new text value
 
-$("#gdRows td").each(function() {
-        var cellText = $(this).text();
-        if ($.trim(cellText) == '') {
-            $(this).css('background-color', 'cyan');
-        }
-    });
 
  */
-var i=0;
+
+// ('.player' + i).text();
 
 $(document).ready(function(){
   console.log("before\n", window.localStorage);
-
+  var i=0;
   // add event listener
   $(".add-text-btn").on("click", function(){
    i++;
    console.log(i);
-   if(i<=1){
+   if(i<=1 && $('.player').text() === ""){
     //when change to an object need to json stringify - in order to store in local storage
     //when retrieve need to json.parse to change back to an obj
     // var curKeyValue = "theKey"; // change to dynamic key?
@@ -41,7 +36,7 @@ $(document).ready(function(){
     $('#theKey2').val('');
     $('#theKey3').val('');
 
-  } else if(i<=2){
+  } else if(i<=2 && $('.player2').text() === ""){
       var name = $('#theKey').val();
       var points = $('#theKey2').val();
       var price = $('#theKey3').val();
@@ -59,7 +54,7 @@ $(document).ready(function(){
     $('#theKey2').val('');
     $('#theKey3').val('');
 
-  } else if(i<=3){
+  } else if(i<=3 && $('.player3').text() === ""){
       var name = $('#theKey').val();
       var points = $('#theKey2').val();
       var price = $('#theKey3').val();
@@ -77,7 +72,7 @@ $(document).ready(function(){
     $('#theKey2').val('');
     $('#theKey3').val('');
 
-  } else if(i<=4){
+  } else if(i<=4 && $('.player4').text() === ""){
     var name = $('#theKey').val();
     var points = $('#theKey2').val();
     var price = $('#theKey3').val();
@@ -96,7 +91,7 @@ $(document).ready(function(){
     $('#theKey3').val('');
     console.log(i);
 
-  } else if(i<=5){
+  } else if(i<=5 && $('.player5').text() === ""){
     var name = $('#theKey').val();
     var points = $('#theKey2').val();
     var price = $('#theKey3').val();
@@ -148,8 +143,9 @@ $(document).ready(function(){
     $(".player5").empty();
     $(".player-fppg5").empty();
     $(".player-salary5").empty();
-    i=3;
+    i=4;
   });
+
   $(".compare-btn").on("click", function(){
     var name = $('#theKey').val();
     var points = $('#theKey2').val();
@@ -174,6 +170,64 @@ $(document).ready(function(){
         }, 1000);
         console.log(data);
    });
+
+  $(".clear-entries-btn").on("click", function(){
+    localStorage.removeItem('player1');
+    $(".player").empty();
+    $(".player-fppg").empty();
+    $(".player-salary").empty();
+    localStorage.removeItem('player2');
+    $(".player2").empty();
+    $(".player-fppg2").empty();
+    $(".player-salary2").empty();
+    localStorage.removeItem('player3');
+    $(".player3").empty();
+    $(".player-fppg3").empty();
+    $(".player-salary3").empty();
+    localStorage.removeItem('player4');
+    $(".player4").empty();
+    $(".player-fppg4").empty();
+    $(".player-salary4").empty();
+    localStorage.removeItem('player5');
+    $(".player5").empty();
+    $(".player-fppg5").empty();
+    $(".player-salary5").empty();
+    $('#theKey').val('');
+    $('#theKey2').val('');
+    $('#theKey3').val('');
+    i=0;
+      data[0] = data[0].slice(0,3);
+      data[1] = data[1].slice(0,3);
+      data[2] = data[2].slice(0,3);
+      data[3] = data[3].slice(0,3);
+      console.log(data);
+      setTimeout(function () {
+          chart.load(
+          {
+            // unload: true,
+            columns: data
+        }
+        )
+        }, 1000);
+        console.log(data);
+
+  });
+  $('#row1').on("click", function(){
+    var playerObj = JSON.parse(localStorage.getItem('player1'));
+    var name = playerObj.name;
+    var points = playerObj.fppg;
+    var price = playerObj.salary;
+    //alert(name);
+    $('#theKey').val(name);
+    $('#theKey2').val(points);
+    $('#theKey3').val(price);
+    localStorage.removeItem('player1');
+    $(".player").empty();
+    $(".player-fppg").empty();
+    $(".player-salary").empty();
+    i=0;
+
+  });
 });
 
 
