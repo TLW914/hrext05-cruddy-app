@@ -4,7 +4,7 @@ var chart = c3.generate({
         x : 'x',
         columns: data,
         groups: [
-            ['download', 'loading']
+            ['', '']
         ],
         type: 'bar'
     },
