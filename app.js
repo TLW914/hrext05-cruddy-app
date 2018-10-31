@@ -9,6 +9,11 @@ update display with new text value
 // ('.player' + i).text();
 
 $(document).ready(function(){
+$(document).ready(function() {
+      alert("document ready occurred!");
+});
+
+
   console.log("before\n", window.localStorage);
   var i=0;
   // add event listener

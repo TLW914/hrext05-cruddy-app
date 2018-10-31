@@ -27,8 +27,9 @@
     <script src="data.js"></script>
     <script src="chart.js"></script>
     </div>
-    <div class="row" style="display:flex; flex-direction:row; justify-content: flex-left">
-    <div class="col-lg-4 offset-lg-1" style="display:inline-block">
+    <div class="parent" style="display:flex; flex-direction: row; justify-content: center">
+    <div class="parent2" style="display:flex; flex-direction:column; padding-right: 20px">
+  <div class="col-lg-8" style="display:flex; width:100%">
     <table class="table table-hover">
   <thead>
     <tr>
@@ -72,23 +73,80 @@
   </tbody>
 </table>
 </div>
-<div class="col-lg-4 offset-lg-1" style="display:inline-block">
-  <div class="form-group">
-  <label class="col-form-label" for="inputDefault">NAME</label>
-  <input type="text" class="form-control text-input" id="theKey" placeholder="Enter player name" id="inputDefault">
-  <label class="col-form-label" for="inputDefault">FPPG</label>
-  <input type="text" class="form-control" id="theKey2" placeholder="Enter fantasy points per game" id="inputDefault">
-  <label class="col-form-label" for="inputDefault">SALARY</label>
-  <input type="text" class="form-control" id="theKey3" placeholder="Enter player salary" id="inputDefault">
-  <br>
-  <button class="add-text-btn btn-outline-success">Add Player</button>
-  <button class="compare-btn btn-outline-warning">Compare Player</button>
-  <button class="clear-entries-btn btn-danger">Clear Entries</button>
-</div>
-</div>
-</div>
+    </div>
+    <div class="parent3" style="display:flex; flex-direction:column; padding-left: 20px">
+      <div style="display:flex;">
+        <div class="form-group">
+        <label class="col-form-label" for="inputDefault">NAME</label>
+        <input type="text" class="form-control text-input" id="theKey" placeholder="Enter player name" id="inputDefault">
+        <label class="col-form-label" for="inputDefault">FPPG</label>
+        <input type="text" class="form-control" id="theKey2" placeholder="Enter fantasy points per game" id="inputDefault">
+        <label class="col-form-label" for="inputDefault">SALARY</label>
+        <input type="text" class="form-control" id="theKey3" placeholder="Enter player salary" id="inputDefault">
+        <br>
+        <button class="add-text-btn btn btn-outline-success">Add Player</button>
+        <button class="compare-btn btn btn-outline-warning">Compare Player</button>
+        <button class="clear-entries-btn btn btn-danger">Clear</button>
+      </div>
+      </div>
+
+      <!-- <div class="col-lg-8" style="display:flex; width:100%"> -->
+        <h6>Players</h6>
+    <div class="table-wrapper-scroll-y" style="display:flex; width:100%; max-height: 200px;
+  overflow-y: auto; -ms-overflow-style: -ms-autohiding-scrollbar;">
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player</th>
+        <th scope="col"></th>
+        <th scope="col">$7000</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>10</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>9.8</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>11</td>
+        <td>@twitter</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Mark</td>
+        <td>5.4</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Jacob</td>
+        <td>2.7</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Larry</td>
+        <td>3.4</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
 
-
-  </body>
+    </div>
+  </div>
+ </body>
 </html>

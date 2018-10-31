@@ -4,10 +4,11 @@ var chart = c3.generate({
         x : 'x',
         columns: data,
         groups: [
-            ['', '']
+
         ],
         type: 'bar'
     },
+
     axis: {
         x: {
             type: 'category' // this needed to load string x value
