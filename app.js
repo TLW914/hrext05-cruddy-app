@@ -7,11 +7,57 @@ update display with new text value
  */
 
 // ('.player' + i).text();
+  function generate_table() {
+  // get the reference for the body
+
+  // creates a <table> element and a <tbody> element
+  var tblBody = $("#playerTable");
+
+  // creating all cells
+  for (var i = 0; i < playerArr.length; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 1; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(String(playerArr[i].Name));
+      // var cellText = document.createTextNode(String(playerArr[i].FPPG));
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+    for (var j = 1; j < 2; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(String(playerArr[i].FPPG));
+      // var cellText = document.createTextNode(String(playerArr[i].FPPG));
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+    for (var j = 2; j < 3; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(String(playerArr[i].Salary));
+      // var cellText = document.createTextNode(String(playerArr[i].FPPG));
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    // add the row to the end of the table body
+    tblBody.append(row);
+  }
+}
 
 $(document).ready(function(){
-$(document).ready(function() {
-      alert("document ready occurred!");
-});
+  generate_table();
+
+  // put the <tbody> in the <table>
 
 
   console.log("before\n", window.localStorage);
