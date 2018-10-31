@@ -1,7 +1,7 @@
-// use this data to generate your pie chart
+
 var data = [
             ['x', 'Auston Matthews', 'Mitch Marner',],
-            ['average fantasy points', 6, 4.82],
+            ['FPPG', 6, 4.82],
             ['salary', 7900, 6700],
             ['dollar per fantasy point', 1316, 1390]
            ];
